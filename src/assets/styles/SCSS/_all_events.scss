@@ -1,0 +1,105 @@
+.category-section{
+    background: #ffecdc;
+    width: 100%;
+    height: fit-content;
+    padding: $big;
+}
+.all-categories{
+    font-size: $big;
+    margin: $small;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #cities{
+        background: var(--secondary);
+        outline: none;
+        border: none;
+        color: $white;
+        font-size: $big - ($large - $small);
+        padding: 5px 10px;
+        margin:5px;
+        border-radius: 5px;
+        width: fit-content + $small;
+        .city{
+            font-size: $big - $small;
+        }
+    }
+}
+
+.event-description{
+    font-size: $medium;
+    text-align: center;
+}
+
+.check-events{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: $large;
+    li{
+        color: var(--primary);
+        list-style-type: none;
+        margin: $medium;
+        width: fit-content;
+        &:hover{
+            border-bottom: 1px solid var(--primary);
+        }
+    }
+}
+
+.event-container{
+    display: flex;
+    overflow-x: scroll;
+    &::-webkit-scrollbar{
+        display:none;
+    }
+    .event-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
+    height: 280px;
+    margin: $small;
+    border-radius: 5px;
+    overflow: hidden;
+    background: $white;
+    .event-flyer{
+        display: block;
+        width: 100%;
+        height: 60%;
+    }
+
+    .event-details{
+        height: 40%;
+        margin: 10px;
+        .title{
+            font-size: $normal;
+            color: var(--primary);
+        }
+        .date{
+            color: var(--tertiary);
+            margin: $small 0;
+            font-size: $small;
+        }
+        .location{
+            color: var(--secondary);
+            font-size: $small;
+            letter-spacing: 2px;
+        }
+    }
+}
+}
+
+.browse-events{
+    color: $white;
+    background: var(--secondary);
+    border: none;
+    outline: none;
+    padding: $small $big;
+    border-radius: 4px;
+    width: fit-content;
+    margin: $big auto;
+    display: block;
+}

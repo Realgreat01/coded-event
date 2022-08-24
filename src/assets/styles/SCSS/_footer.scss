@@ -1,0 +1,106 @@
+footer{
+    background: var(--primary);
+    .footer-logo{
+        height: $large;
+        margin: $giant $giant 0;
+    }
+    .footer-box{
+        display: grid;
+        grid-template-columns: 4fr 2fr 3fr;
+        align-items: flex-start;
+        margin-top: $big;
+        // background: red;
+
+        .left-footer-box{
+            margin-left: $big;
+            .contact-details{
+                display: flex;
+                align-items: center;
+                margin-bottom: $large;
+                img{
+                    height: $normal;
+                    width: $normal;
+                    margin-right: $small
+                }
+
+                span{
+                    max-width: 40%;
+                    font-size: $small;
+                    color: $white;
+                }
+            }
+            .social-media-icons{
+                display: flex;
+                margin: $small 0;
+                >div{
+                    border: 2px double var(--tertiary);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: $xx-large;
+                    width: $xx-large;
+                    margin-right: 10px;
+                    padding: 5px;
+                    img{
+                        width: $small;
+                        height: $small;
+                    }
+                }
+            }
+            .copyright{
+                color: $white;
+                font-size: $small;
+            }
+        }
+
+        .middle-footer-box{
+            font-size: $small;
+            .company-name{
+                color: var(--secondary);
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                margin-top: $xx-large;
+                li{
+                    list-style-type: none;
+                    text-indent: 0;
+                    color: $white;
+                    margin: 5px 0;
+                    font-size: $small;
+                }
+            }
+        }
+
+        .right-footer-box{
+            font-size: $small;
+            .join-newsletter{
+                color: var(--secondary);
+                margin-bottom: $small;
+            }
+            .email-text{
+                color: $white;
+                font-size: $small;
+            }
+            .email-input{
+                background: $white;
+                height: $big;
+                width: 60%;
+                border: none;
+                outline: none;
+                border-radius: 4px;
+                margin: $small 0;
+            }
+            .join-button{
+                display: block;
+                border: none;
+                outline: none;
+                border-radius: 4px;
+                background: var(--secondary);
+                color: $white;
+                padding: 10px $xx-large;
+            }
+        }
+    }
+}

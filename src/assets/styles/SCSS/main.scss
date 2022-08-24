@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import './variables';
+@import './color_guide';
+
+
+@import './navbar';
+@import './carousel_box';
+@import './benefits';
+@import './top_category';
+@import './all_events';
+@import './footer';
+@import './my_events';
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.faded-text{
+    font-size: $giant+$giant;
+    // border: 1px solid red;
+    -webkit-text-stroke: 1px var(--primary);
+    opacity: 0.2;
+    position: relative;
+    color: transparent;
+}

@@ -1,0 +1,58 @@
+<template>
+  <div class="category-section">
+    <h1 class="all-categories">Popular Events in
+      <select name="cities" id="cities">
+        <option class="city" v-for="(city, index) in cities" :value="city" :selected="index === 0 ? true: false"
+          :key="index">
+          {{city}}
+        </option>
+      </select>
+    </h1>
+
+    <p class="event-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eos reiciendis
+      dolores veritatis vero assumenda perferendis possimus quis. Esse, unde!</p>
+    <ul class="check-events">
+      <li>All</li>
+      <li>Today</li>
+      <li>This Weekend</li>
+      <li>This Month</li>
+      <li>Virtual</li>
+    </ul>
+
+    <div class="event-container">
+      <div v-for="(event, index) in events" :key="index" class="event-cards">
+        <img src="../assets/images/pictures/birthday.png" :alt="`flyer ${index+1}`" class="event-flyer">
+        <div class="event-details">
+          <h2 class="title">{{event.title}}</h2>
+          <h2 class="date">{{event.date}}</h2>
+          <h2 class="location">{{event.location}}</h2>
+        </div>
+      </div>
+    </div>
+
+    <button class=" browse-events">Browse Events</button>
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from 'vue'
+
+const events = ref([])
+const cities = ref(['Lagos', 'Ibadan', 'Abuja', 'Kaduna', 'Onitsha'])
+function fillEventObject () {
+  for (let i = 0; i < 8; i++) {
+    const eventObj = {
+      image: 'flyer-1',
+      title: 'Funmilayo and Ramota Traditional Wedding',
+      date: 'Sat. Jul, 23rd 2:00 PM',
+      location: 'Sheba Center, Lagos'
+    }
+    events.value.push(eventObj)
+  }
+  return events.value
+}
+
+onMounted(() => {
+  fillEventObject()
+})
+</script>

@@ -1,0 +1,17 @@
+[
+    { 
+        "image": "married.jpeg",
+        "details" : "Your Event Details In a Single Barcode",
+        "description" : "CodedEvents helps you create beautiful event programmes with lasting experiences"
+    },
+    { 
+        "image": "couple.jpeg",
+        "details" : "Share Invitation With Friends & Family",
+        "description" : "CodedEvents helps you create beautiful event programmes with lasting experiences"
+    },
+    { 
+        "image": "married.jpeg",
+        "details" : "Receive Event Donations Into Your Digital Wallet",
+        "description" : "CodedEvents helps you create beautiful event programmes with lasting experiences"
+    }
+]

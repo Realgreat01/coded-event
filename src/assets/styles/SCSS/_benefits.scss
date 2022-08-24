@@ -1,0 +1,48 @@
+.benefits-section{
+    position: relative;
+    margin: 30px auto 70px;
+
+    .main-text{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .faded-benefit{
+        position:absolute;
+        text-align: right;
+        right: 4%;
+        top:0%;
+    }
+
+}
+.benefit-container{
+    display: flex;;
+    height: 300px;
+    width: 70%;
+    margin: 10px auto;
+    .benefit-image{
+        width: 50%;
+        height: 100%;
+        padding: 0 5%;
+        img{
+            width: 100%;
+            height: 90%;
+            display: block;
+            border-radius: 5px;
+        }
+    }
+    .benefit-content{
+        width: 50%;
+        height: 100%;
+        padding: 0 5%;
+        .numbers{
+            font-size: $giant;
+            color:pink;
+        }
+        .title{
+            font-size: $large;
+        }
+        .description{
+            font-size: $small;
+        }
+    }
+}
