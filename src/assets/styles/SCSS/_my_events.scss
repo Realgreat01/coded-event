@@ -1,8 +1,18 @@
+.my-events{
+    margin: $giant*2 auto;
+    .my-events-category{
+        .faded-text{
+            right: 5%;
+        }
+    }
+}
+
 .user-events{
     display: flex;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
+    margin-top: $giant*1.5;
     .user-events-card{
         background: var(--primary);
         height: 350px;

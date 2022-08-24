@@ -4,6 +4,10 @@
     height: fit-content;
     padding: $big;
     position: relative;
+    margin-top: $giant*1.2;
+    .faded-text{
+        top: -200%;
+    }
 }
 .all-categories{
     font-size: $big;

@@ -1,6 +1,7 @@
 <template>
   <div class="category-section">
     <section>
+      <h2 class="faded-text">Top Events</h2>
       <h2 class="all-categories">Popular Events in
         <select name="cities" id="cities">
           <option class="city" v-for="(city, index) in cities" :value="city" :selected="index === 0 ? true: false"

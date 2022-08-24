@@ -1,7 +1,10 @@
 <template>
   <div class="my-events">
-    <section class="my-events-category">
-      <h2> My Events</h2>
+    <section class=" my-events-category" style="position: relative">
+      <h2 class="main-text"> My Events</h2>
+      <h2 class="faded-text">
+        My Events
+      </h2>
     </section>
     <div class="user-events">
       <div v-for="(event, index) in allEvents" :key="index" class="user-events-card">
@@ -18,7 +21,7 @@
         </div>
       </div>
     </div>
-  <button class="view-all-events"> View All My Events</button>
+    <button class="view-all-events"> View All My Events</button>
   </div>
 
 </template>
