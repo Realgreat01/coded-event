@@ -2,10 +2,6 @@
     position: relative;
     margin: 30px auto 70px;
 
-    .main-text{
-        text-align: center;
-        margin: 0 auto;
-    }
     .faded-benefit{
         position:absolute;
         text-align: left;
@@ -16,24 +12,38 @@
 .top-categories{
     display: flex;
     width: 100%;
-    height: 100px;
+    height: fit-content;
+    margin: $big auto;
     justify-content: center;
     align-items: center;
 
     .image-container{
-        padding: 20px;
-        height: 50px;
-        margin: 10px;
-        width: 50px;
-        border-radius: 50%;
-        background: pink;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
-            height: 30px;
-            width: 30px;
+        flex-direction: column;
 
+        .event-image{
+            padding: 20px;
+            height: 100px;
+            margin: 10px;
+            width: 100px;
+            border-radius: 50%;
+            background: var(--light-shade);
+            border: 1px solid var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+            height: 40px;
+            width: 40px;
+            }
+        }
+        .event-name{
+            font-size: $small;
+            color: var(--primary);
+            height: 20px;
         }
     }
 }

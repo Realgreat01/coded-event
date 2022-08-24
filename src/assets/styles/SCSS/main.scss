@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
 @import './variables';
 @import './color_guide';
@@ -12,17 +14,31 @@
 @import './footer';
 @import './my_events';
 
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    // font-family: 'Noto Sans', sans-serif;
 }
 
 .faded-text{
-    font-size: $giant+$giant;
-    // border: 1px solid red;
-    -webkit-text-stroke: 1px var(--primary);
-    opacity: 0.2;
-    position: relative;
+    font-size: $giant*2.5;
+    font-family: 'Playfair', serif;
+    -webkit-text-stroke: 1px var(--secondary);
+    top: -120%;
+    opacity: 0.3;
+    position: absolute;
     color: transparent;
+}
+section .main-text{
+    text-align: center;
+    color: var(--primary);
+    font-size: $big;
+    font-family: 'Playfair', serif;
+    margin-top: $giant;
+}
+section h2{
+    font-family: 'Playfair', serif;
 }

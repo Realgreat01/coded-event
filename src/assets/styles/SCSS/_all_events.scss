@@ -1,8 +1,9 @@
 .category-section{
-    background: #ffecdc;
+    background: var(--light-shade);
     width: 100%;
     height: fit-content;
     padding: $big;
+    position: relative;
 }
 .all-categories{
     font-size: $big;
@@ -12,15 +13,17 @@
     align-items: center;
     justify-content: center;
     #cities{
-        background: var(--secondary);
+        background: var(--light-yellow);
         outline: none;
         border: none;
-        color: $white;
-        font-size: $big - ($large - $small);
+        color: var(--secondary);
+        font-size: $big;
         padding: 5px 10px;
         margin:5px;
         border-radius: 5px;
         width: fit-content + $small;
+        font-family: $playFair;
+        font-weight: 600;
         .city{
             font-size: $big - $small;
         }
@@ -30,6 +33,9 @@
 .event-description{
     font-size: $medium;
     text-align: center;
+    color: var(--secondary);
+    width: 50%;
+    margin: 0 auto;
 }
 
 .check-events{
@@ -42,15 +48,41 @@
         list-style-type: none;
         margin: $medium;
         width: fit-content;
+        padding: 4px 5px;
+        border-bottom: 2px solid transparent;
         &:hover{
-            border-bottom: 1px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
         }
     }
 }
 
+.switch-button{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    justify-content: space-between;
+    h2{
+        color: $white;
+        background: var(--tertiary);
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 50%;
+
+    }
+}
 .event-container{
     display: flex;
     overflow-x: scroll;
+    position: relative;
+    z-index: 1;
     &::-webkit-scrollbar{
         display:none;
     }
@@ -60,7 +92,7 @@
     justify-content: space-between;
     align-items: center;
     min-width: 200px;
-    height: 280px;
+    height: 300px;
     margin: $small;
     border-radius: 5px;
     overflow: hidden;
@@ -74,18 +106,20 @@
     .event-details{
         height: 40%;
         margin: 10px;
+        font-weight: 600;
         .title{
-            font-size: $normal;
+            font-size: $small;
             color: var(--primary);
         }
         .date{
-            color: var(--tertiary);
+            color: var(--secondary);
             margin: $small 0;
             font-size: $small;
         }
         .location{
             color: var(--secondary);
             font-size: $small;
+            font-weight: 400;
             letter-spacing: 2px;
         }
     }

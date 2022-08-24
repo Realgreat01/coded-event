@@ -1,13 +1,15 @@
 <template>
   <div class="category-section">
-    <h1 class="all-categories">Popular Events in
-      <select name="cities" id="cities">
-        <option class="city" v-for="(city, index) in cities" :value="city" :selected="index === 0 ? true: false"
-          :key="index">
-          {{city}}
-        </option>
-      </select>
-    </h1>
+    <section>
+      <h2 class="all-categories">Popular Events in
+        <select name="cities" id="cities">
+          <option class="city" v-for="(city, index) in cities" :value="city" :selected="index === 0 ? true: false"
+            :key="index">
+            {{city}}
+          </option>
+        </select>
+      </h2>
+    </section>
 
     <p class="event-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eos reiciendis
       dolores veritatis vero assumenda perferendis possimus quis. Esse, unde!</p>
@@ -30,6 +32,11 @@
       </div>
     </div>
 
+      <div class="switch-button">
+        <h2 class="prev-btn" style="transform: rotate(180deg)"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
+        <h2 class="next-btn"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
+      </div>
+
     <button class=" browse-events">Browse Events</button>
   </div>
 </template>
@@ -40,7 +47,7 @@ import { onMounted, ref } from 'vue'
 const events = ref([])
 const cities = ref(['Lagos', 'Ibadan', 'Abuja', 'Kaduna', 'Onitsha'])
 function fillEventObject () {
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 6; i++) {
     const eventObj = {
       image: 'flyer-1',
       title: 'Funmilayo and Ramota Traditional Wedding',

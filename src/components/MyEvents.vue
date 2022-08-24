@@ -18,7 +18,9 @@
         </div>
       </div>
     </div>
+  <button class="view-all-events"> View All My Events</button>
   </div>
+
 </template>
 
 <script setup>

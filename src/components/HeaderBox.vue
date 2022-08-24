@@ -11,13 +11,18 @@
 
     <div class="action-box">
       <div v-if="state.isAutheticated">
-        <img src="../assets/images/icons/alarm.svg" alt="notification">
-        <img src="../assets/images/icons/user.svg" alt="user" @click="state.isAutheticated = false">
+        <div class="notification-box">
+          <img src="../assets/images/icons/alarm.svg" alt="notification">
+          <p class="notification-counter">{{notification}}</p>
+        </div>
+        <div class="user-box">
+          <img src="../assets/images/icons/user.svg" alt="user" @click="state.isAutheticated = false">
+        </div>
       </div>
 
       <div v-else>
-        <button @click="state.isAutheticated=true" class="log-in">Sign Up</button>
-        <button class="log-out">Log in <img src="../assets/images/icons/user.svg" alt=""></button>
+        <button @click="state.isAutheticated=true" class="sign-up">Sign Up</button>
+        <button class="log-in">Log In <img src="../assets/images/icons/user.svg" alt=""></button>
       </div>
     </div>
   </nav>
@@ -25,4 +30,7 @@
 
 <script setup>
 import { state } from '@/composables/auth.js'
+import { ref } from 'vue'
+
+const notification = ref(20)
 </script>

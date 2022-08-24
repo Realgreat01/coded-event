@@ -7,8 +7,8 @@
       <button class="create-event">Create An Event</button>
     </div>
     <div class="switch-button">
-      <h2 class="prev-btn"> &lt; </h2>
-      <h2 class="next-btn"> &gt; </h2>
+      <h2 class="prev-btn" style="transform: rotate(180deg)"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
+      <h2 class="next-btn"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
     </div>
   </div>
 </template>

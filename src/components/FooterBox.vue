@@ -5,9 +5,12 @@
 
       <div class="left-footer-box">
 
-        <div class="contact-details"><img src="../assets/images/icons/location.svg" alt="address"><span>Address Line 1, <br> City, State name, <br> Country.</span></div>
-        <div class="contact-details"><img src="../assets/images/icons/mail.svg" alt="email"><span>admin@codedevents.com</span></div>
-        <div class="contact-details"><img src="../assets/images/icons/mobile.svg" alt="telephone"><span>080665533556</span></div>
+        <div class="contact-details"><img src="../assets/images/icons/location.svg" alt="address"><span>Address Line 1,
+            <br> City, State name, <br> Country.</span></div>
+        <div class="contact-details"><img src="../assets/images/icons/mail.svg"
+            alt="email"><span>admin@codedevents.com</span></div>
+        <div class="contact-details"><img src="../assets/images/icons/mobile.svg"
+            alt="telephone"><span>080665533556</span></div>
 
         <div class="social-media-icons">
           <div><img src="../assets/images/icons/facebook.svg" alt="facebook"></div>

@@ -8,5 +8,12 @@ $xx-large: 28px;
 $big : 36px;
 $giant: 50px;
 
+
+
 // colors
 $white: #fff;
+$gray: #ffffff3f;
+$linear-background: linear-gradient( 180deg, $white 5%, var(--primary) 90%, var(--primary));
+
+// fonts
+$playFair :  'Playfair', serif;
