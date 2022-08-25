@@ -23,7 +23,7 @@
     </ul>
 
     <div class="event-container">
-      <div v-for="(event, index) in events" :key="index" class="event-cards">
+      <div v-for="(event, index) in events" :key="index" class="event-cards" ref="eventBox" style="transition: 1s">
         <img src="../assets/images/pictures/birthday.png" :alt="`flyer ${index+1}`" class="event-flyer">
         <div class="event-details">
           <h2 class="title">{{event.title}}</h2>
@@ -33,10 +33,11 @@
       </div>
     </div>
 
-      <div class="switch-button">
-        <h2 class="prev-btn" style="transform: rotate(180deg)"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
-        <h2 class="next-btn"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
-      </div>
+    <div class="switch-button">
+      <h2 @click="translateBox(50)" class="prev-btn" style="transform: rotate(180deg)"> <img
+          src="../assets/images/icons/arrow.svg" alt=""></h2>
+      <h2 @click="translateBox(-100)" class="next-btn"> <img src="../assets/images/icons/arrow.svg" alt=""></h2>
+    </div>
 
     <button class=" browse-events">Browse Events</button>
   </div>
@@ -46,6 +47,8 @@
 import { onMounted, ref } from 'vue'
 
 const events = ref([])
+const initialPosition = ref(0)
+const eventBox = ref(null)
 const cities = ref(['Lagos', 'Ibadan', 'Abuja', 'Kaduna', 'Onitsha'])
 function fillEventObject () {
   for (let i = 0; i < 6; i++) {
@@ -58,6 +61,20 @@ function fillEventObject () {
     events.value.push(eventObj)
   }
   return events.value
+}
+
+function translateBox (width) {
+  initialPosition.value += width
+  if (initialPosition.value < 200 && initialPosition.value > -400) {
+    for (let i = 0; i < eventBox.value.length; i++) {
+      eventBox.value[i].style.transform = `translateX(${initialPosition.value}px)`
+    }
+  } else if (initialPosition.value > 200) {
+    initialPosition.value = 200
+  } else {
+    initialPosition.value = -400
+  }
+  console.log(initialPosition.value)
 }
 
 onMounted(() => {
